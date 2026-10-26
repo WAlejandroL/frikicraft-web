@@ -58,7 +58,15 @@ main, footer { position: relative; z-index: 1; }
   margin: clamp(12px, 2.4vh, 26px) auto 4px;
   filter: drop-shadow(0 0 28px rgb(0, 0, 0));
 }
-.admin-art {
+.hero-art {
+  display: block;
+  width: min(100%, 780px);
+  max-height: 57svh;
+  object-fit: contain;
+  margin: clamp(12px, 2.4vh, 26px) auto 4px;
+  filter: drop-shadow(0 0 28px rgb(0, 0, 0));
+}
+.spoiler-art {
   display: block;
   width: min(100%, 780px);
   max-height: 57svh;
