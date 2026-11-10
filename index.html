@@ -4,90 +4,140 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#100016">
-  <meta name="description" content="FrikiCraft está en desarrollo. Descubre avances y postúlate para formar parte del staff.">
+  <meta name="description" content="FrikiCraft server de minecraft para una comunidad UDG.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="FrikiCraft — Próximamente">
-  <meta property="og:description" content="Estamos construyendo algo especial. Buscamos staff para crear FrikiCraft contigo.">
+  <meta property="og:title" content="FrikiCraft">
+  <meta property="og:description" content="Entra a disfrutar de este servidor de Minecraft.">
   <meta property="og:image" content="/assets/frikicraftproximamente.png">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>FrikiCraft — Próximamente</title>
-  <link rel="icon" type="image/png" href="/assets/frikifest.png">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/png" href="/assets/frikicraftlogo.png">
+  <link rel="stylesheet" href="/styles/home.css">
   <script src="/script.js" defer></script>
 </head>
 <body>
   <div class="ambient ambient-one"></div>
   <div class="ambient ambient-two"></div>
   <header class="site-header">
-    <a class="brand" href="/" aria-label="FrikiCraft, inicio">
-      <img src="/assets/frikifest.png" alt="FrikiCraft">
+    <a class="brand" href="/index.html" aria-label="FrikiCraft, inicio">
+      <img src="/assets/frikicraftlogo.png" alt="FrikiCraft">
     </a>
-    <span class="status"><span class="status-dot"></span> EN DESARROLLO</span>
+    <!-- <span class="status"><span class="status-dot"></span> HOME </span> -->
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="eyebrow"><span class="eyebrow-line"></span> UN NUEVO MUNDO ESTÁ EN CAMINO <span class="eyebrow-line"></span></div>
-      <h1 id="hero-title" class="sr-only">FrikiCraft próximamente</h1>
-      <img class="hero-art" src="/assets/frikicraftproximamente.png" alt="FrikiCraft próximamente" fetchpriority="high">
-      <div class="scroll-cue" aria-hidden="true"><span></span></div>
-    </section>
 
-    <section class="spoiler001" aria-labelledby="spoiler-title">
-      <div class="section-kicker">SPOILER #003</div>
-      <h2 id="spoiler-title">El Altar.</h2>
-      <p>El lugar donde resucitan los guerreros, esta listo...</p>
-      <img class="spoiler-art" src="/assets/altar.png" alt="El altar donde resucitan los guerreros.">
-    </section>
+    <section class="menu" aria-labelledby="menu-title">
+        <div class="menu-container">
+            <span class="menu-tienda">
+                <!--<div class="section-kicker">TIENDA</div>
+                <h2 id="tienda-title">¡Visita nuestra tienda!</h2>
+                <p>Adquiere rangos y objetos especiales para tu experiencia en FrikiCraft.</p> -->
+                <a href="https://frikicraft.tebex.store/" target="_blank" rel="noopener noreferrer">
+                    <img class="tiendaboton" src="/assets/home/tiendavip.png" alt="Botón de la tienda de FrikiCraft">
+                </a>
+            </span>
 
-    <section class="spoiler002" aria-labelledby="spoiler-title">
-      <div class="section-kicker">SPOILER #002</div>
-      <h2 id="spoiler-title">Conoce a los ADMINS.</h2>
-      <div class="roles" aria-label="Administradores">
-        <div class="roles-track">
-          <div class="role-slide">
-            <span>WRoncoW</span>
-            <img class="admin-art" src="/assets/wroncow.png" alt="WRONCOW">
-          </div>
-          <div class="role-slide">
-            <span>PaulGT01</span>
-            <img class="admin-art" src="/assets/paulgt01.png" alt="PAULGT01">
-          </div>
-          <div class="role-slide">
-            <span>AnaGTG</span>
-            <img class="admin-art" src="/assets/anagtg.png" alt="ANAGTG">
-          </div>
-          <div class="role-slide">
-            <span>Uvularbug_</span>
-            <img class="admin-art" src="/assets/uvularbug_.png" alt="UVULARBUG_">
-          </div>
-          <div class="role-slide">
-            <span>JakuVicary</span>
-            <img class="admin-art" src="/assets/jakuvicary.png" alt="JAKUVICARY">
-          </div>
-          <div class="role-slide">
-            <span>lfgua10</span>
-            <img class="admin-art" src="/assets/lfgua10.png" alt="LFGUA10">
-          </div>
+            <span class="menu-ticket">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOlmX_oSaPpSdAE0PEqjpbhW_-kL8zRvAEA4msyfyzc8IVGw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+                    <img class="ticketboton" src="/assets/home/tickets.png" alt="Botón de invitación al Discord de FrikiCraft">
+                </a>
+            </span>
+
+            <span class="menu-tutoriales">
+                <a href="/tutoriales.html" target="_blank" rel="noopener noreferrer">
+                    <img class="tutorialesboton" src="/assets/home/tutoriales.png" alt="Botón de tutoriales de FrikiCraft">
+                </a>
+            </span>
+
+            <span class="menu-votaciones">
+                <a href="/votaciones.html" target="_blank" rel="noopener noreferrer">
+                    <img class="votacionesboton" src="/assets/home/votaciones.png" alt="Botón de votaciones de FrikiCraft">
+                </a>
+            </span>
+
+            <span class="menu-comandos">
+                <a href="/comandos.html" target="_blank" rel="noopener noreferrer">
+                    <img class="comandosboton" src="/assets/home/comandos.png" alt="Botón de comandos de FrikiCraft">
+                </a>
+            </span>
         </div>
-        <button class="roles-arrow roles-prev" aria-label="Administrador anterior">
-          &#10094;
-        </button>
-        <button class="roles-arrow roles-next" aria-label="Siguiente administrador">
-          &#10095;
-        </button>
-        <div class="roles-dots" aria-label="Seleccionar administrador"></div>
-      </div>
     </section>
 
-    <section class="spoiler001" aria-labelledby="spoiler-title">
-      <div class="section-kicker">SPOILER #001</div>
-      <h2 id="spoiler-title">Esto apenas comienza.</h2>
-      <p>FrikiCraft está en desarrollo y buscamos personas con ganas de crear una comunidad divertida, cuidada y llena de ideas. Si te interesa ayudar con la moderación, construcción, contenido o gestión del servidor, queremos conocerte.</p>
-      <div class="roles1" aria-label="Áreas de colaboración">
-        <span>MODERACIÓN</span><span>CONSTRUCCIÓN</span><span>IDEAS Y CONTENIDO</span>
-      </div>
-      <a class="text-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeqlou2ZpxmUxnnUBZBMLUD8m5z0SvZKJfGT6JzOSY5wzwf4g/viewform" target="_blank" rel="noopener noreferrer">Quiero formar parte <span aria-hidden="true">→</span></a>
+    <section class="trailer-section">
+        <span class="trailer-tag">DESCUBRE FRIKICRAFT</span>
+
+        <h2>NUESTRA <span>AVENTURA</span></h2>
+
+        <p>Conoce el mundo que te espera.</p>
+
+        <div class="trailer-container">       
+            <iframe
+            src="https://www.youtube.com/embed/ZfSetOyvB2c"
+            title="Tráiler oficial de FrikiCraft"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+            </iframe>
+        </div>
     </section>
+
+
+    <section class="countdown-section">
+
+    <span class="countdown-tag">EL MOMENTO SE ACERCA</span>
+
+    <h2>LA AVENTURA <span>COMIENZA EN</span></h2>
+
+    <div class="countdown" id="countdown">
+
+        <div class="countdown-item">
+        <span id="dias">00</span>
+        <small>DÍAS</small>
+        </div>
+
+        <div class="countdown-item">
+        <span id="horas">00</span>
+        <small>HORAS</small>
+        </div>
+
+        <div class="countdown-item">
+        <span id="minutos">00</span>
+        <small>MINUTOS</small>
+        </div>
+
+        <div class="countdown-item">
+        <span id="segundos">00</span>
+        <small>SEGUNDOS</small>
+        </div>
+
+    </div>
+
+    <p class="countdown-date">
+        VIERNES 13 DE NOVIEMBRE · 19:00 H
+    </p>
+
+    <div id="countdown-finished" hidden>
+        ¡FRIKICRAFT YA ESTÁ ABIERTO!
+    </div>
+
+    </section>
+
+    <section class="studio-section">
+
+        <span class="studio-label">UNA CREACIÓN DE</span>
+
+        <div class="studio-logo">
+            <img
+            src="/assets/home/racoondevs.jpeg"
+            alt="Logo de RacoonDevs, estudio de desarrollo de FrikiCraft">
+        </div>
+
+        <p>Desarrollo, creatividad e innovación.</p>
+
+    </section>
+
+
   </main>
 
   <footer>

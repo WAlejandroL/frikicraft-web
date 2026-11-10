@@ -1,0 +1,279 @@
+
+/* ========================================
+   FRIKICRAFT - CENTRO DE TUTORIALES
+   ======================================== */
+
+.tutoriales-page {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 36px, 920px);
+  margin: 0 auto;
+  padding: clamp(36px, 7vh, 76px) 0 70px;
+}
+
+/* Navegación */
+
+.back-home {
+  color: #efc8fa;
+  text-decoration: none;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  transition: color .2s ease;
+}
+
+.back-home:hover {
+  color: var(--pink);
+}
+
+/* Encabezado */
+
+.tutoriales-intro {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.section-kicker {
+  color: var(--yellow);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .24em;
+}
+
+.tutoriales-intro h1 {
+  margin: 14px 0;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(2rem, 6vw, 3.7rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: .035em;
+}
+
+.tutoriales-intro h1 span {
+  color: var(--pink);
+  text-shadow: 0 0 22px rgba(237, 40, 255, .3);
+}
+
+.tutoriales-intro > p {
+  max-width: 540px;
+  margin: 16px auto 0;
+  color: var(--muted);
+  font-size: .94rem;
+  line-height: 1.8;
+}
+
+.intro-line {
+  width: 70px;
+  height: 2px;
+  margin: 25px auto 0;
+  background: var(--pink);
+  box-shadow: 0 0 12px var(--pink);
+}
+
+/* Lista de tutoriales */
+
+.tutoriales-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tutorial-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+
+  padding: 26px;
+  border: 1px solid rgba(229, 90, 255, .18);
+  border-radius: 8px;
+
+  background: linear-gradient(
+    115deg,
+    rgba(54, 12, 68, .42),
+    rgba(16, 0, 22, .78)
+  );
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    background-color .25s ease;
+}
+
+.tutorial-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(237, 40, 255, .65);
+  background-color: rgba(76, 14, 91, .15);
+}
+
+.tutorial-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+
+  border: 1px solid rgba(237, 40, 255, .35);
+  border-radius: 6px;
+
+  color: var(--pink);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+
+  background: rgba(237, 40, 255, .06);
+}
+
+.tutorial-info {
+  min-width: 0;
+}
+
+.platform-label {
+  color: #d28be0;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+}
+
+.tutorial-info h2 {
+  margin: 6px 0;
+  color: var(--text);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.15;
+}
+
+.tutorial-info p {
+  margin: 0 0 17px;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.7;
+}
+
+/* Enlace de YouTube */
+
+.tutorial-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  padding: 11px 14px;
+  border: 1px solid rgba(237, 40, 255, .38);
+  border-radius: 4px;
+
+  color: #f7dafa;
+  background: rgba(237, 40, 255, .07);
+
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-decoration: none;
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    border-color .2s ease;
+}
+
+.tutorial-link:hover {
+  transform: scale(1.03);
+  background: rgba(237, 40, 255, .16);
+  border-color: var(--pink);
+}
+
+.play-icon {
+  color: var(--pink);
+  font-size: .8rem;
+}
+
+.tutorial-status {
+  align-self: start;
+  color: #8f789a;
+  font-size: .62rem;
+  letter-spacing: .1em;
+  white-space: nowrap;
+}
+
+/* Ayuda */
+
+.tutoriales-ayuda {
+  margin-top: 38px;
+  padding: 26px 16px;
+  border-top: 1px solid rgba(229, 90, 255, .18);
+  text-align: center;
+}
+
+.tutoriales-ayuda p {
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+}
+
+.tutoriales-ayuda a {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--pink);
+  font-size: .8rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: .08em;
+}
+
+.tutoriales-ayuda a:hover {
+  color: var(--yellow);
+}
+
+/* Adaptación a móviles */
+
+@media (max-width: 600px) {
+  .tutoriales-page {
+    width: calc(100% - 28px);
+    padding-top: 38px;
+    padding-bottom: 44px;
+  }
+
+  .tutoriales-intro {
+    margin-bottom: 30px;
+  }
+
+  .tutorial-card {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 13px;
+    padding: 19px 15px;
+  }
+
+  .tutorial-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+
+  .tutorial-info h2 {
+    font-size: 1.55rem;
+  }
+
+  .tutorial-info p {
+    font-size: .8rem;
+  }
+
+  .tutorial-status {
+    display: none;
+  }
+
+  .tutorial-link {
+    font-size: .62rem;
+    padding: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tutorial-card,
+  .tutorial-link,
+  .back-home {
+    transition: none;
+  }
+}

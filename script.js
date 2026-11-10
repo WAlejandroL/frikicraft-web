@@ -40,3 +40,53 @@ document.querySelectorAll(".roles").forEach((carousel) => {
 
   showSlide(0);
 });
+
+
+/* CUENTA REGRESIVA FRIKICRAFT */
+
+const fechaApertura = new Date("2026-11-13T19:00:00-06:00").getTime();
+
+const countdown = document.getElementById("countdown");
+const finalizado = document.getElementById("countdown-finished");
+
+if (countdown && finalizado) {
+
+  function actualizarContador() {
+    const ahora = Date.now();
+    const diferencia = fechaApertura - ahora;
+
+    if (diferencia <= 0) {
+      countdown.hidden = true;
+      finalizado.hidden = false;
+      return;
+    }
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+    const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+    const segundos = Math.floor((diferencia / 1000) % 60);
+
+    document.getElementById("dias").textContent =
+      String(dias).padStart(2, "0");
+
+    document.getElementById("horas").textContent =
+      String(horas).padStart(2, "0");
+
+    document.getElementById("minutos").textContent =
+      String(minutos).padStart(2, "0");
+
+    document.getElementById("segundos").textContent =
+      String(segundos).padStart(2, "0");
+  }
+
+  actualizarContador();
+
+  const intervaloContador = setInterval(() => {
+    actualizarContador();
+
+    if (Date.now() >= fechaApertura) {
+      clearInterval(intervaloContador);
+    }
+  }, 1000);
+
+}

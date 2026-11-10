@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100016">
+  <title>FrikiCraft — Comandos</title>
+
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="/styles/comandos.css">
+</head>
+<body class="comandos-page">
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="/index.html" aria-label="FrikiCraft, inicio">
+      <img src="/assets/frikicraftlogo.png" alt="FrikiCraft">
+    </a>
+  </header>
+
+  <main class="comandos-container">
+
+    <a class="back-home" href="/index.html">← VOLVER AL INICIO</a>
+
+    <section class="comandos-intro">
+      <span class="section-tag">GUÍA DEL JUGADOR</span>
+      <h1>LISTA DE <span>COMANDOS</span></h1>
+      <p>
+        Todo lo que necesitas para aprovechar tu aventura en FrikiCraft.
+        Encuentra aquí los comandos disponibles dentro del servidor.
+      </p>
+    </section>
+
+    <section class="comandos-tools">
+      <input
+        type="search"
+        id="buscadorComandos"
+        placeholder="Buscar un comando..."
+        autocomplete="off"
+        aria-label="Buscar comandos"
+      >
+
+      <div class="filtros-comandos">
+        <button class="filtro activo" data-filter="todos">Todos</button>
+        <button class="filtro" data-filter="cuenta">Cuenta</button>
+        <button class="filtro" data-filter="economia">Economía</button>
+        <button class="filtro" data-filter="general">General</button>
+        <button class="filtro" data-filter="teletransporte">Teletransporte</button>
+        <button class="filtro" data-filter="casas">Casas</button>
+        <button class="filtro" data-filter="subastas">Subastas</button>
+        <button class="filtro" data-filter="actividades">Actividades</button>
+      </div>
+    </section>
+
+    <div class="comandos-resultados">
+      <span id="contadorComandos">27 comandos disponibles</span>
+    </div>
+
+    <section class="comandos-grid" id="listaComandos">
+
+      <!-- CUENTA -->
+      <article class="comando-card" data-category="cuenta">
+        <code>/register &lt;contraseña&gt; &lt;repetir contraseña&gt;</code>
+        <p>Registra tu usuario dentro del servidor.</p>
+        <span class="comando-categoria">CUENTA</span>
+      </article>
+
+      <article class="comando-card" data-category="cuenta">
+        <code>/login &lt;contraseña&gt;</code>
+        <p>Inicia sesión en el servidor con tu contraseña.</p>
+        <span class="comando-categoria">CUENTA</span>
+      </article>
+
+      <!-- ECONOMÍA -->
+      <article class="comando-card" data-category="economia">
+        <code>/balance</code>
+        <p>Consulta cuánto dinero tienes en FrikiCoins.</p>
+        <span class="comando-categoria">ECONOMÍA</span>
+      </article>
+
+      <article class="comando-card" data-category="economia">
+        <code>/pay &lt;jugador&gt; &lt;cantidad&gt;</code>
+        <p>Envía FrikiCoins a otro jugador.</p>
+        <span class="comando-categoria">ECONOMÍA</span>
+      </article>
+
+      <!-- GENERAL -->
+      <article class="comando-card" data-category="general">
+        <code>/fc</code>
+        <p>Abre el menú principal de FrikiCraft.</p>
+        <span class="comando-categoria">GENERAL</span>
+      </article>
+
+      <article class="comando-card" data-category="general">
+        <code>/whatsapp</code>
+        <p>Obtén el enlace del grupo de WhatsApp.</p>
+        <span class="comando-categoria">GENERAL</span>
+      </article>
+
+      <article class="comando-card" data-category="general">
+        <code>/discord</code>
+        <p>Obtén el enlace del servidor de Discord.</p>
+        <span class="comando-categoria">GENERAL</span>
+      </article>
+
+      <!-- TELETRANSPORTE -->
+      <article class="comando-card" data-category="teletransporte">
+        <code>/spawn</code>
+        <p>Teletranspórtate al punto de aparición del servidor.</p>
+        <span class="comando-categoria">TELETRANSPORTE</span>
+      </article>
+
+      <article class="comando-card" data-category="teletransporte">
+        <code>/tpa &lt;jugador&gt;</code>
+        <p>Solicita teletransportarte hasta otro jugador.</p>
+        <span class="comando-categoria">TELETRANSPORTE</span>
+      </article>
+
+      <article class="comando-card" data-category="teletransporte">
+        <code>/tpahere &lt;jugador&gt;</code>
+        <p>Solicita que otro jugador se teletransporte hasta ti.</p>
+        <span class="comando-categoria">TELETRANSPORTE</span>
+      </article>
+
+      <article class="comando-card" data-category="teletransporte">
+        <code>/tpaccept</code>
+        <p>Acepta una solicitud de teletransporte.</p>
+        <span class="comando-categoria">TELETRANSPORTE</span>
+      </article>
+
+      <article class="comando-card" data-category="teletransporte">
+        <code>/tpacancel</code>
+        <p>Deniega una solicitud de teletransporte.</p>
+        <span class="comando-categoria">TELETRANSPORTE</span>
+      </article>
+
+      <!-- CASAS -->
+      <article class="comando-card" data-category="casas">
+        <code>/sethome &lt;nombre&gt;</code>
+        <p>Establece una ubicación como tu casa.</p>
+        <span class="comando-categoria">CASAS</span>
+      </article>
+
+      <article class="comando-card" data-category="casas">
+        <code>/home &lt;nombre&gt;</code>
+        <p>Teletranspórtate a una de tus casas registradas.</p>
+        <span class="comando-categoria">CASAS</span>
+      </article>
+
+      <article class="comando-card" data-category="casas">
+        <code>/delhome &lt;nombre&gt;</code>
+        <p>Elimina una casa que hayas registrado.</p>
+        <span class="comando-categoria">CASAS</span>
+      </article>
+
+      <!-- SUBASTAS -->
+      <article class="comando-card" data-category="subastas">
+        <code>/ah</code>
+        <p>Abre la casa de subastas para comprar y vender objetos.</p>
+        <span class="comando-categoria">SUBASTAS</span>
+      </article>
+
+      <article class="comando-card" data-category="subastas">
+        <code>/ah sell &lt;precio&gt;</code>
+        <p>Pone a la venta el objeto que tienes en la mano por el precio indicado.</p>
+        <span class="comando-categoria">SUBASTAS</span>
+      </article>
+
+      <article class="comando-card" data-category="subastas">
+        <code>/ah bid &lt;precio&gt;</code>
+        <p>Inicia una subasta del objeto que tienes en la mano.</p>
+        <span class="comando-categoria">SUBASTAS</span>
+      </article>
+
+      <!-- ACTIVIDADES -->
+      <article class="comando-card" data-category="actividades">
+        <code>/duel &lt;jugador&gt;</code>
+        <p>Reta a otro jugador a un combate PvP.</p>
+        <span class="comando-categoria">ACTIVIDADES</span>
+      </article>
+
+      <article class="comando-card" data-category="actividades">
+        <code>/skin &lt;nombre&gt;</code>
+        <p>Establece una skin utilizando el nombre indicado.</p>
+        <span class="comando-categoria">ACTIVIDADES</span>
+      </article>
+
+      <article class="comando-card" data-category="actividades">
+        <code>/skin clear</code>
+        <p>Elimina tu skin personalizada y vuelve a la predeterminada.</p>
+        <span class="comando-categoria">ACTIVIDADES</span>
+      </article>
+
+      <article class="comando-card" data-category="actividades">
+        <code>/uc menu</code>
+        <p>Abre el menú de cosméticos.</p>
+        <span class="comando-categoria">ACTIVIDADES</span>
+      </article>
+
+      <article class="comando-card" data-category="actividades">
+        <code>/uc clear</code>
+        <p>Quita todos los cosméticos que tengas equipados.</p>
+        <span class="comando-categoria">ACTIVIDADES</span>
+      </article>
+
+      <article class="comando-card" data-category="actividades">
+        <code>/jobs</code>
+        <p>Abre el menú de trabajos disponibles.</p>
+        <span class="comando-categoria">ACTIVIDADES</span>
+      </article>
+
+      <article class="comando-card" data-category="actividades">
+        <code>/audio</code>
+        <p>Abre la sección de audio del Voice Chat.</p>
+        <span class="comando-categoria">ACTIVIDADES</span>
+      </article>
+
+      <article class="comando-card" data-category="actividades">
+        <code>/helpop &lt;mensaje&gt;</code>
+        <p>Envía una solicitud de asistencia al equipo de Staff.</p>
+        <span class="comando-categoria">ACTIVIDADES</span>
+      </article>
+
+    </section>
+
+    <div class="sin-resultados" id="sinResultados" hidden>
+      <span>:(</span>
+      <p>No encontramos comandos con esa búsqueda.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <span class="footer-mark">FRIKICRAFT</span>
+    <p>Una aventura, infinitas posibilidades.</p>
+  </footer>
+
+  <script>
+    const buscador = document.getElementById("buscadorComandos");
+    const filtros = document.querySelectorAll(".filtro");
+    const comandos = document.querySelectorAll(".comando-card");
+    const contador = document.getElementById("contadorComandos");
+    const sinResultados = document.getElementById("sinResultados");
+
+    let categoriaActiva = "todos";
+
+    function filtrarComandos() {
+      const busqueda = buscador.value.toLowerCase().trim();
+      let visibles = 0;
+
+      comandos.forEach(comando => {
+        const coincideCategoria =
+          categoriaActiva === "todos" ||
+          comando.dataset.category === categoriaActiva;
+
+        const coincideTexto =
+          comando.textContent.toLowerCase().includes(busqueda);
+
+        const mostrar = coincideCategoria && coincideTexto;
+
+        comando.hidden = !mostrar;
+
+        if (mostrar) visibles++;
+      });
+
+      contador.textContent = `${visibles} ${visibles === 1 ? "comando disponible" : "comandos disponibles"}`;
+      sinResultados.hidden = visibles !== 0;
+    }
+
+    buscador.addEventListener("input", filtrarComandos);
+
+    filtros.forEach(filtro => {
+      filtro.addEventListener("click", () => {
+        filtros.forEach(boton => boton.classList.remove("activo"));
+        filtro.classList.add("activo");
+
+        categoriaActiva = filtro.dataset.filter;
+        filtrarComandos();
+      });
+    });
+
+    filtrarComandos();
+  </script>
+
+</body>
+</html>

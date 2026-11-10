@@ -1,0 +1,253 @@
+
+.comandos-container {
+  width: min(1100px, calc(100% - 36px));
+  margin: 35px auto 90px;
+  position: relative;
+  z-index: 1;
+}
+
+.back-home {
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-family: Rajdhani, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 15px;
+  transition: color .2s ease;
+}
+
+.back-home:hover {
+  color: var(--pink);
+}
+
+.comandos-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 65px auto 45px;
+}
+
+.section-tag {
+  display: inline-block;
+  color: var(--yellow);
+  font-family: Rajdhani, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+}
+
+.comandos-intro h1 {
+  font-family: Rajdhani, sans-serif;
+  font-size: clamp(42px, 8vw, 76px);
+  font-weight: 800;
+  line-height: .95;
+  margin: 0 0 20px;
+  letter-spacing: 2px;
+}
+
+.comandos-intro h1 span {
+  color: var(--pink);
+  text-shadow: 0 0 25px #ed28ff55;
+}
+
+.comandos-intro p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 560px;
+}
+
+.comandos-tools {
+  max-width: 850px;
+  margin: 0 auto 25px;
+}
+
+#buscadorComandos {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 20px;
+  border: 1px solid #7c288d;
+  border-radius: 12px;
+  outline: none;
+  background: #190b20cc;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+#buscadorComandos::placeholder {
+  color: #a58eac;
+}
+
+#buscadorComandos:focus {
+  border-color: var(--pink);
+  box-shadow: 0 0 18px #ed28ff25;
+}
+
+.filtros-comandos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.filtro {
+  padding: 9px 15px;
+  border: 1px solid #633071;
+  border-radius: 30px;
+  background: #1c0b25;
+  color: var(--muted);
+  font-family: Rajdhani, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.filtro:hover {
+  border-color: var(--pink);
+  color: white;
+}
+
+.filtro.activo {
+  background: #651078;
+  border-color: var(--pink);
+  color: white;
+  box-shadow: 0 0 14px #ed28ff35;
+}
+
+.comandos-resultados {
+  max-width: 100%;
+  margin: 30px 0 15px;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.comandos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.comando-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 145px;
+  padding: 21px;
+  box-sizing: border-box;
+  border: 1px solid #65247780;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #24102eeb, #13091beF);
+  transition: transform .2s ease, border-color .2s ease,
+              box-shadow .2s ease;
+}
+
+.comando-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--pink);
+  box-shadow: 0 8px 25px #ed28ff18;
+}
+
+.comando-card[hidden] {
+  display: none;
+}
+
+.comando-card code {
+  display: inline-block;
+  color: var(--yellow);
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.comando-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 12px 0 20px;
+}
+
+.comando-categoria {
+  margin-top: auto;
+  color: var(--pink);
+  font-family: Rajdhani, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.sin-resultados {
+  text-align: center;
+  padding: 55px 15px;
+  color: var(--muted);
+}
+
+.sin-resultados[hidden] {
+  display: none;
+}
+
+.sin-resultados span {
+  display: block;
+  color: var(--pink);
+  font-family: Rajdhani, sans-serif;
+  font-size: 55px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  .comandos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .comandos-container {
+    width: calc(100% - 28px);
+    margin-top: 25px;
+  }
+
+  .comandos-intro {
+    margin: 55px auto 35px;
+  }
+
+  .comandos-intro p {
+    font-size: 14px;
+  }
+
+  .comandos-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .comando-card {
+    min-height: 125px;
+    padding: 18px;
+  }
+
+  .filtros-comandos {
+    justify-content: flex-start;
+  }
+
+  .filtro {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}

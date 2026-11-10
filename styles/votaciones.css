@@ -1,0 +1,273 @@
+
+.votaciones-container {
+  width: min(1100px, calc(100% - 36px));
+  margin: 35px auto 90px;
+  position: relative;
+  z-index: 1;
+}
+
+.back-home {
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-family: Rajdhani, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color .2s ease;
+}
+
+.back-home:hover {
+  color: var(--pink);
+}
+
+/* INTRODUCCIÓN */
+
+.votaciones-intro {
+  max-width: 750px;
+  margin: 65px auto 85px;
+  text-align: center;
+}
+
+.section-tag {
+  display: inline-block;
+  color: var(--yellow);
+  font-family: Rajdhani, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.votaciones-intro h1 {
+  font-family: Rajdhani, sans-serif;
+  font-size: clamp(42px, 8vw, 76px);
+  font-weight: 800;
+  line-height: .95;
+  margin: 15px 0 20px;
+}
+
+.votaciones-intro h1 span,
+.section-heading h2 span,
+.votacion-actual h2 span {
+  color: var(--pink);
+  text-shadow: 0 0 22px #ed28ff55;
+}
+
+.votaciones-intro p,
+.section-heading p,
+.votacion-actual p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* GANADORES */
+
+.ganadores-section {
+  margin-bottom: 100px;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 35px;
+}
+
+.section-heading h2,
+.votacion-actual h2 {
+  font-family: Rajdhani, sans-serif;
+  font-size: clamp(32px, 6vw, 48px);
+  font-weight: 800;
+  margin: 12px 0;
+}
+
+.ganadores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.ganador-card {
+  overflow: hidden;
+  border: 1px solid #762c8b80;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #25102e, #13091b);
+  transition: transform .25s ease, border-color .25s ease,
+              box-shadow .25s ease;
+}
+
+.ganador-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--pink);
+  box-shadow: 0 10px 30px #ed28ff20;
+}
+
+.ganador-imagen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background: #170b20;
+}
+
+.ganador-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+
+.ganador-card:hover .ganador-imagen img {
+  transform: scale(1.06);
+}
+
+.ganador-puesto {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  padding: 7px 12px;
+  border-radius: 5px;
+  background: var(--yellow);
+  color: #180b00;
+  font-family: Rajdhani, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.ganador-info {
+  padding: 20px;
+}
+
+.ganador-edicion {
+  color: var(--pink);
+  font-family: Rajdhani, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.ganador-info h3 {
+  color: var(--text);
+  font-family: Rajdhani, sans-serif;
+  font-size: 23px;
+  margin: 9px 0;
+}
+
+.ganador-info p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+.ganadores-nota {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 30px;
+}
+
+/* VOTACIÓN ACTUAL */
+
+.votacion-actual {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 55px 30px;
+  border: 1px solid #ed28ff75;
+  border-radius: 16px;
+  background: radial-gradient(
+    ellipse at center,
+    #5c087a55,
+    #1a0925ee 75%
+  );
+  box-shadow: 0 0 35px #ed28ff15;
+  text-align: center;
+}
+
+.votacion-actual h2 {
+  margin: 15px 0;
+}
+
+.votacion-actual p {
+  max-width: 550px;
+  margin: 0 auto 30px;
+}
+
+.votar-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 16px 27px;
+  border-radius: 7px;
+  background: linear-gradient(100deg, #a10fc4, #ed28ff);
+  color: white;
+  font-family: Rajdhani, sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-decoration: none;
+  box-shadow: 0 0 25px #ed28ff40;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.votar-boton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px #ed28ff70;
+}
+
+.votar-flecha {
+  font-size: 23px;
+}
+
+.votacion-aclaracion {
+  display: block;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .ganadores-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .votaciones-container {
+    width: calc(100% - 28px);
+    margin-top: 25px;
+  }
+
+  .votaciones-intro {
+    margin: 55px auto 65px;
+  }
+
+  .ganadores-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .ganador-imagen {
+    aspect-ratio: 16 / 10;
+  }
+
+  .votacion-actual {
+    padding: 40px 20px;
+  }
+
+  .votar-boton {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 17px;
+  }
+}
