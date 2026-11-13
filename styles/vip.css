@@ -1,0 +1,582 @@
+
+/* =================================
+   VIP - FRIKICRAFT
+================================= */
+
+.vip-page {
+    position: relative;
+    z-index: 1;
+    width: min(100% - 36px, 950px);
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+/* HERO */
+
+.vip-hero {
+    text-align: center;
+    padding: clamp(55px, 9vw, 100px) 10px 75px;
+}
+
+.vip-tag,
+.vip-section-tag {
+    color: var(--yellow);
+    font-family: Rajdhani, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.vip-hero h1 {
+    margin: 18px 0;
+    font-family: Rajdhani, sans-serif;
+    font-size: clamp(55px, 10vw, 95px);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.vip-hero h1 span {
+    color: var(--pink);
+    text-shadow: 0 0 30px #ed28ff70;
+}
+
+.vip-hero > p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: clamp(14px, 2vw, 17px);
+    line-height: 1.8;
+}
+
+
+/* BOTÓN PRINCIPAL */
+
+.vip-main-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    width: min(100%, 490px);
+    min-height: 105px;
+    margin: 38px auto 0;
+    padding: 20px 28px;
+    overflow: hidden;
+
+    border: 2px solid #f58aff;
+    border-radius: 13px;
+
+    color: white;
+    text-decoration: none;
+
+    background:
+        linear-gradient(
+            110deg,
+            #67109f,
+            #b51bd2 50%,
+            #ed28ff
+        );
+
+    box-shadow:
+        0 0 15px #ed28ff70,
+        0 0 35px #ed28ff35,
+        inset 0 0 20px #ffffff15;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.vip-main-button::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -50%;
+    width: 35%;
+    height: 300%;
+    transform: rotate(25deg);
+    background: #ffffff20;
+    transition: left .6s ease;
+}
+
+.vip-main-button:hover {
+    transform: translateY(-5px) scale(1.025);
+    border-color: white;
+    box-shadow:
+        0 0 20px #ed28ff,
+        0 0 55px #ed28ff80,
+        inset 0 0 25px #ffffff20;
+}
+
+.vip-main-button:hover::before {
+    left: 130%;
+}
+
+.button-icon {
+    position: relative;
+    z-index: 1;
+    color: var(--yellow);
+    font-size: 35px;
+    text-shadow: 0 0 15px #ffe64a90;
+}
+
+.button-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    text-align: left;
+}
+
+.button-content strong {
+    font-family: Rajdhani, sans-serif;
+    font-size: clamp(20px, 4vw, 27px);
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.button-content small {
+    color: #ffe8ff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.button-arrow {
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    color: var(--yellow);
+    font-size: 30px;
+    transition: transform .3s ease;
+}
+
+.vip-main-button:hover .button-arrow {
+    transform: translateX(6px);
+}
+
+.vip-security {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 17px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* ENCABEZADOS */
+
+.vip-section-heading {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.vip-section-heading h2 {
+    margin: 12px 0;
+    color: var(--text);
+    font-family: Rajdhani, sans-serif;
+    font-size: clamp(32px, 6vw, 52px);
+    font-weight: 800;
+}
+
+.vip-section-heading h2 span {
+    color: var(--pink);
+    text-shadow: 0 0 20px #ed28ff55;
+}
+
+.vip-section-heading > p {
+    max-width: 570px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* TUTORIAL */
+
+.vip-tutorial {
+    margin: 35px auto 90px;
+}
+
+.vip-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 23px;
+    margin: 20px 0;
+    padding: 28px;
+    border: 1px solid #ed28ff35;
+    border-radius: 13px;
+
+    background:
+        linear-gradient(145deg, #28102fdd, #100016ee);
+
+    box-shadow: 0 0 25px #ed28ff0c;
+    transition:
+        border-color .3s ease,
+        transform .3s ease;
+}
+
+.vip-step:hover {
+    border-color: #ed28ff80;
+    transform: translateX(4px);
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #ed28ff75;
+    border-radius: 12px;
+
+    background: #ed28ff18;
+    color: var(--pink);
+
+    font-family: Rajdhani, sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+
+    text-shadow: 0 0 12px #ed28ff80;
+}
+
+.step-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.step-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 13px;
+}
+
+.step-icon {
+    font-size: 23px;
+}
+
+.step-heading h3 {
+    margin: 0;
+    color: var(--text);
+    font-family: Rajdhani, sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.step-content > p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 9px 0;
+}
+
+.step-extra {
+    color: #e8baff !important;
+}
+
+
+/* ENLACE DENTRO DEL PASO */
+
+.step-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--yellow);
+    font-family: Rajdhani, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.step-link:hover {
+    color: var(--pink);
+}
+
+
+/* ADVERTENCIAS */
+
+.vip-warning,
+.vip-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin: 18px 0;
+    padding: 16px;
+    border-radius: 9px;
+}
+
+.vip-warning {
+    border: 1px solid #ffe64a55;
+    background: #ffe64a0d;
+}
+
+.vip-warning > span {
+    flex-shrink: 0;
+    color: var(--yellow);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.vip-warning p,
+.vip-info p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.vip-warning strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--yellow);
+    font-family: Rajdhani, sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.vip-info {
+    border: 1px solid #ed28ff45;
+    background: #ed28ff0d;
+}
+
+.vip-info > span {
+    flex-shrink: 0;
+    width: 23px;
+    height: 23px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--pink);
+    border-radius: 50%;
+    color: var(--pink);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* RECORDATORIOS */
+
+.vip-reminders {
+    margin: 85px auto;
+}
+
+.reminders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.reminder-card {
+    padding: 27px 20px;
+    text-align: center;
+    border: 1px solid #ed28ff35;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #28102fdd, #100016ee);
+    transition: transform .3s ease, border-color .3s ease;
+}
+
+.reminder-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--pink);
+}
+
+.reminder-card > span {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 30px;
+}
+
+.reminder-card h3 {
+    color: var(--pink);
+    font-family: Rajdhani, sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.reminder-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* CTA FINAL */
+
+.vip-final {
+    margin: 100px auto 70px;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 1px solid #ed28ff30;
+    border-bottom: 1px solid #ed28ff30;
+    background: radial-gradient(
+        ellipse at center,
+        #ed28ff12,
+        transparent 70%
+    );
+}
+
+.vip-final > span {
+    color: var(--yellow);
+    font-family: Rajdhani, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.vip-final h2 {
+    margin: 15px 0;
+    font-family: Rajdhani, sans-serif;
+    font-size: clamp(30px, 6vw, 48px);
+    font-weight: 800;
+}
+
+.vip-final h2 strong {
+    color: var(--pink);
+    text-shadow: 0 0 20px #ed28ff55;
+}
+
+.vip-final > p {
+    max-width: 500px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.vip-final-button {
+    margin-top: 30px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    .vip-page {
+        width: calc(100% - 28px);
+    }
+
+    .vip-hero {
+        padding: 55px 5px 55px;
+    }
+
+    .vip-tag,
+    .vip-section-tag {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .vip-main-button {
+        min-height: 85px;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .button-icon {
+        font-size: 27px;
+    }
+
+    .button-content strong {
+        font-size: 19px;
+        letter-spacing: 1px;
+    }
+
+    .button-content small {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .button-arrow {
+        font-size: 24px;
+    }
+
+    .vip-step {
+        gap: 14px;
+        padding: 19px;
+    }
+
+    .step-number {
+        width: 39px;
+        height: 39px;
+        font-size: 18px;
+    }
+
+    .step-heading {
+        align-items: flex-start;
+        gap: 9px;
+    }
+
+    .step-heading h3 {
+        font-size: 18px;
+    }
+
+    .step-icon {
+        font-size: 19px;
+    }
+
+    .step-content > p {
+        font-size: 13px;
+    }
+
+    .reminders-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reminder-card {
+        padding: 22px;
+    }
+
+    .vip-tutorial {
+        margin-bottom: 65px;
+    }
+
+    .vip-reminders {
+        margin: 65px auto;
+    }
+
+    .vip-final {
+        margin: 70px auto 45px;
+        padding: 38px 12px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .vip-step {
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .step-number {
+        width: 33px;
+        height: 33px;
+        font-size: 15px;
+    }
+
+    .step-heading h3 {
+        font-size: 16px;
+    }
+
+    .vip-warning,
+    .vip-info {
+        padding: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vip-page *,
+    .vip-page *::before,
+    .vip-page *::after {
+        transition: none !important;
+    }
+}

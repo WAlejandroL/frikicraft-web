@@ -277,3 +277,223 @@
     transition: none;
   }
 }
+
+
+/* =================================
+   TUTORIAL CHAT DE VOZ
+================================= */
+
+.tutorial-voice {
+    border-color: #ed28ff55;
+}
+
+.voice-guide {
+    margin-top: 24px;
+}
+
+.voice-intro {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px;
+    margin-bottom: 20px;
+    border: 1px solid #ed28ff45;
+    border-radius: 10px;
+    background: #ed28ff0d;
+}
+
+.voice-icon {
+    font-size: 30px;
+}
+
+.voice-intro strong,
+.voice-tips > strong,
+.voice-help strong {
+    color: var(--pink);
+    font-family: Rajdhani, sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.voice-intro p,
+.voice-help p {
+    margin: 5px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.voice-platform {
+    padding: 20px;
+    margin: 17px 0;
+    border: 1px solid #ed28ff30;
+    border-radius: 10px;
+    background: #10001699;
+}
+
+.voice-platform h3 {
+    margin: 0 0 15px;
+    color: var(--yellow);
+    font-family: Rajdhani, sans-serif;
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+
+.voice-platform ol {
+    padding-left: 22px;
+    margin: 0;
+    color: var(--muted);
+}
+
+.voice-platform li {
+    padding: 7px 0 7px 5px;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.voice-platform li::marker {
+    color: var(--pink);
+    font-weight: 700;
+}
+
+.voice-platform code,
+.voice-help code {
+    display: inline-block;
+    padding: 4px 9px;
+    border: 1px solid #ed28ff55;
+    border-radius: 5px;
+    background: #ed28ff16;
+    color: var(--yellow);
+    font-family: monospace;
+    font-size: 13px;
+}
+
+.voice-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin-left: -22px;
+}
+
+.voice-links a {
+    padding: 8px 12px;
+    border: 1px solid #ed28ff60;
+    border-radius: 6px;
+    color: var(--pink);
+    font-size: 12px;
+    text-decoration: none;
+    transition: background .2s ease;
+}
+
+.voice-links a:hover {
+    background: #ed28ff20;
+}
+
+.voice-tips {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ffe64a45;
+    border-radius: 10px;
+    background: #ffe64a09;
+}
+
+.voice-tips > strong {
+    color: var(--yellow);
+}
+
+.voice-tips ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+.voice-tips li {
+    padding: 5px 0;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.voice-tips li::marker {
+    color: var(--yellow);
+}
+
+.voice-help {
+    margin-top: 17px;
+    padding: 17px;
+    border-left: 3px solid var(--pink);
+    background: #ed28ff0c;
+}
+
+.voice-doc-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--yellow);
+    font-family: Rajdhani, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+}
+
+.voice-doc-link:hover {
+    color: var(--pink);
+}
+
+@media (max-width: 550px) {
+    .voice-platform {
+        padding: 15px;
+    }
+
+    .voice-intro {
+        padding: 13px;
+    }
+
+    .voice-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* Corrección de la tarjeta de chat de voz */
+.tutorial-voice {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.tutorial-voice .tutorial-info {
+    min-width: 0;
+    width: 100%;
+}
+
+.tutorial-voice .voice-guide {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.tutorial-voice .voice-platform,
+.tutorial-voice .voice-tips,
+.tutorial-voice .voice-help {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.tutorial-voice ol,
+.tutorial-voice ul {
+    padding-left: 24px;
+}
+
+.tutorial-voice li {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+    .tutorial-voice {
+        grid-column: 1 / -1;
+    }
+}

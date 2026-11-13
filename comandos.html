@@ -23,8 +23,6 @@
 
   <main class="comandos-container">
 
-    <a class="back-home" href="/index.html">← VOLVER AL INICIO</a>
-
     <section class="comandos-intro">
       <span class="section-tag">GUÍA DEL JUGADOR</span>
       <h1>LISTA DE <span>COMANDOS</span></h1>
@@ -50,13 +48,14 @@
         <button class="filtro" data-filter="general">General</button>
         <button class="filtro" data-filter="teletransporte">Teletransporte</button>
         <button class="filtro" data-filter="casas">Casas</button>
+        <button class="filtro" data-filter="protecciones">Protecciones</button>
         <button class="filtro" data-filter="subastas">Subastas</button>
         <button class="filtro" data-filter="actividades">Actividades</button>
       </div>
     </section>
 
     <div class="comandos-resultados">
-      <span id="contadorComandos">27 comandos disponibles</span>
+      <span id="contadorComandos">34 comandos disponibles</span>
     </div>
 
     <section class="comandos-grid" id="listaComandos">
@@ -154,6 +153,50 @@
         <code>/delhome &lt;nombre&gt;</code>
         <p>Elimina una casa que hayas registrado.</p>
         <span class="comando-categoria">CASAS</span>
+      </article>
+
+      <!-- PROTECCIONES -->
+      <article class="comando-card" data-category="protecciones">
+        <code>/ps add &lt;usuario&gt;</code>
+        <p>Da permisos a otro usuario para interactuar dentro de tu protección.</p>
+        <span class="comando-categoria">PROTECCIONES</span>
+      </article>
+
+      <article class="comando-card" data-category="protecciones">
+        <code>/ps remove &lt;usuario&gt;</code>
+        <p>Quita los permisos de un usuario dentro de tu protección.</p>
+        <span class="comando-categoria">PROTECCIONES</span>
+      </article>
+
+      <article class="comando-card" data-category="protecciones">
+        <code>/ps addowner &lt;usuario&gt;</code>
+        <p>Añade a otro usuario como dueño de tu protección.</p>
+        <span class="comando-categoria">PROTECCIONES</span>
+      </article>
+
+      <article class="comando-card" data-category="protecciones">
+        <code>/ps removeowner &lt;usuario&gt;</code>
+        <p>Elimina a un usuario de la lista de dueños de tu protección.</p>
+        <span class="comando-categoria">PROTECCIONES</span>
+      </article>
+
+      <!-- TIENDAS -->
+      <article class="comando-card" data-category="economia">
+        <code>/tienda</code>
+        <p>Obtén el enlace de la página web de FrikiCraft.</p>
+        <span class="comando-categoria">ECONOMÍA</span>
+      </article>
+
+      <article class="comando-card" data-category="economia">
+        <code>/frikishop</code>
+        <p>Abre la tienda de bloques de FrikiCraft.</p>
+        <span class="comando-categoria">ECONOMÍA</span>
+      </article>
+
+      <article class="comando-card" data-category="economia">
+        <code>/shop</code>
+        <p>Abre la tienda de bloques de FrikiCraft.</p>
+        <span class="comando-categoria">ECONOMÍA</span>
       </article>
 
       <!-- SUBASTAS -->

@@ -347,3 +347,27 @@ footer { width: min(100% - 36px, 1180px); margin: 0 auto; padding: 18px 0 max(24
   letter-spacing: 1px;
   margin-top: 15px;
 }
+
+/* BOTÓN REGLAS */
+
+.menu-reglas {
+    width: min(100% - 9px, 165px);
+    margin: 0 auto;
+    padding: clamp(44px, 8vw, 82px) 0 clamp(64px, 9vw, 100px);
+    border-top: 1px solid rgba(229, 90, 255, .2);
+    text-align: center;
+}
+
+.reglasboton {
+    display: block;
+    width: min(100%, 780px);
+    max-height: 57svh;
+    object-fit: contain;
+    margin: clamp(12px, 2.4vh, 26px) auto 4px;
+    filter: drop-shadow(0 0 28px rgb(0, 0, 0));
+    transition: transform .3s ease;
+}
+
+.reglasboton:hover {
+    transform: scale(1.5);
+}
